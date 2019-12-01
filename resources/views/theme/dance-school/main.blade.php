@@ -26,11 +26,10 @@
                                         <a href="#"> <span class="fa fa-bars" aria-hidden="true"></span></a>
                                         <input type="checkbox" id="drop-2" />
                                         <ul>
-                                            <li><a href="#classes" class="drop-text">Dance Classes</a></li>
-                                            <li><a href="about.html" class="drop-text">Trainers</a></li>
-                                            <li><a href="#testi" class="drop-text">Testimonials</a></li>
-                                            <li><a href="gallery.html" class="drop-text">Gallery</a></li>
-                                            <li><a href="contact.html" class="drop-text">Contact Us</a></li>
+                                            <li><a href="#classes" class="drop-text">Tienda</a></li>
+                                            <li><a href="about.html" class="drop-text">blog</a></li>
+                                            <li><a href="{{ route("galeria")}}" class="drop-text">Gallery</a></li>
+                                            <li><a href="contact.html" class="drop-text">Contactanos</a></li>
                                             <li>
                                                     @if (Route::has('login'))
                                                     <div class="top-right links">

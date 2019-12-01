@@ -25,6 +25,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        View::share('theme1', 'dance-school1');
+
         View::share('theme', 'dance-school');
     }
 }
