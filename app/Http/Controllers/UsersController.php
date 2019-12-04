@@ -2,18 +2,34 @@
 
 namespace App\Http\Controllers;
 
-use App\Galeria;
 use Illuminate\Http\Request;
+use App\User;
+use Caffeinated\Shinobi\Models\Role;
 
-class GaleriaController extends Controller
+
+class UsersController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('permission:Categories.create')->only(['create', 'store']);
+
+        $this->middleware('permission:Categories.index')->only('index');
+
+        $this->middleware('permission:Categories.edit')->only(['edit', 'update']);
+
+        $this->middleware('permission:Categories.show')->only('show');
+
+        $this->middleware('permission:Categories.destroy')->only('destroy');
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
-    { }
+    {
+        //
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -39,10 +55,10 @@ class GaleriaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Galeria  $galeria
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Galeria $galeria)
+    public function show($id)
     {
         //
     }
@@ -50,10 +66,10 @@ class GaleriaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Galeria  $galeria
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Galeria $galeria)
+    public function edit($id)
     {
         //
     }
@@ -62,10 +78,10 @@ class GaleriaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Galeria  $galeria
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Galeria $galeria)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -73,10 +89,10 @@ class GaleriaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Galeria  $galeria
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Galeria $galeria)
+    public function destroy($id)
     {
         //
     }

@@ -18,14 +18,12 @@ Home
 @section("rutamenu3")
 {{ url("/")}}
 @endsection
-@section("subrutas")
-
-@endsection
 @section("titulo")
-{{ Auth::user()->name }}
+Our Gallery
 @endsection
 
 @section('content')
+
 
 
 @endsection

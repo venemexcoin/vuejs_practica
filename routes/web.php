@@ -20,6 +20,17 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/galeria', 'GaleriaController@index')->name('galeria');
+Route::get('/gallery', 'Web\PageController@gallery')->name('gallery');
 
-Route::group(['middleware' => ['auth']], function () { });
+Route::group(['middleware' => ['auth']], function () {
+
+    Route::resource('galeria',   'GaleriaController');
+
+    // Roles
+
+    Route::resource('roles',   'RoleController');
+
+    Route::resource('products',   'ProductController');
+
+    Route::resource('users',   'UsersController');
+});

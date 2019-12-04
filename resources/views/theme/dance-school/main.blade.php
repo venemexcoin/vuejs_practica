@@ -28,7 +28,7 @@
                                         <ul>
                                             <li><a href="#classes" class="drop-text">Tienda</a></li>
                                             <li><a href="about.html" class="drop-text">blog</a></li>
-                                            <li><a href="{{ route("galeria")}}" class="drop-text">Gallery</a></li>
+                                            <li><a href="{{ route("gallery")}}" class="drop-text">Gallery</a></li>
                                             <li><a href="contact.html" class="drop-text">Contactanos</a></li>
                                             <li>
                                                     @if (Route::has('login'))
