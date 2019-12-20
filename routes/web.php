@@ -15,12 +15,24 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/prueba', function () {
+    return view('grid.video1.prueba');
+});
 
+Route::get('/video16', function () {
+    return view('grid.video16.index');
+});
+
+Route::get('/video2', function () {
+    return view('web\javascript');
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/gallery', 'Web\PageController@gallery')->name('gallery');
+
+Route::get('/idea', 'Web\PageController@idea')->name('idea');
 
 Route::group(['middleware' => ['auth']], function () {
 
@@ -33,4 +45,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('products',   'ProductController');
 
     Route::resource('users',   'UsersController');
+
+    Route::get('mis-ideas', 'IdeaController@getIdeas');
+
+    Route::post('guardar-idea', 'IdeaController@store');
 });

@@ -11,4 +11,9 @@ class PageController extends Controller
     {
         return view("web.galeria");
     }
+
+    public function idea()
+    {
+        return view("web.idea");
+    }
 }
