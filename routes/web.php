@@ -26,6 +26,10 @@ Route::get('/video16', function () {
 Route::get('/video2', function () {
     return view('web\javascript');
 });
+
+Route::get('/vuejs', function () {
+    return view('Vuejs\index');
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -49,4 +53,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('mis-ideas', 'IdeaController@getIdeas');
 
     Route::post('guardar-idea', 'IdeaController@store');
+
+    Route::resource('pruebaX', 'JsonController');
+
+    Route::get('pruebaA', 'JsonController@getPruebaA')->name('pruebaA');
 });
