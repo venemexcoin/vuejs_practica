@@ -42,13 +42,16 @@
 
 
 <script>
-export default {
-  data() {
-    return {
-      main: []
-    };
+myObject = new Vue({
+  el: "main",
+  data: {
+    todos: [
+      { text: "Learn JavaScript" },
+      { text: "Learn Vue.js" },
+      { text: "Build Something Awesome" }
+    ]
   }
-};
+});
 </script>
 
 <style>
